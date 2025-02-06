@@ -7,7 +7,9 @@ export default defineConfig({
   build:{
     rollupOptions:{
       input:{
-        main: 'index.html'
+        main: 'index.html',
+        committee:'./src/pages/committee.html',
+        contact: './src/pages/contact.html'
       }
     }
   }
