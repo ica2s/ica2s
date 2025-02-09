@@ -70,25 +70,29 @@
               x-show="dropdownOpen"
               @click.away="dropdownOpen = false"
               x-transition
-              class="absolute left-0 top-full mt-2 bg-gray-800 shadow-lg rounded-lg opacity-100 transition-all duration-300 z-50 w-48"
+              class="absolute left-0 top-full mt-2 bg-gray-800 shadow-lg rounded-lg opacity-100 transition-all duration-300 z-50 w-48 p-2 flex flex-col"
             >
               <li>
                 <a
                   href="./src/pages/committee.html"
-                  class="block px-4 py-2 hover:bg-gray-700"
+                  class="block px-4 py-2 hover:bg-gray-700 whitespace-nowrap"
                   >Organizing Committee</a
                 >
               </li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-700"
+              <!-- <li>
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-700 whitespace-nowrap"
                   >Technical Committee</a
                 >
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-700"
+                <a
+                  href="#"
+                  class="block px-4 py-2 hover:bg-gray-700 whitespace-nowrap"
                   >Advisory Board</a
                 >
-              </li>
+              </li> -->
             </ul>
           </li>
 
@@ -135,15 +139,14 @@
         International Conference on Advances in Artificial Intelligence for
         Society
       </h1>
-      <p class="text-lg text-gray-400 mt-4">
-        November 16-17, 2025 | ICA2S - 2025
-      </p>
+      <h1 class="text-4xl font-bold text-cyan-400">(ICA2S 2025)</h1>
+      <p class="text-lg text-gray-400 mt-4">November 13-14, 2025</p>
       <p class="text-lg text-amber-400 mt-6 font-semibold italic">
         Venue: Gulf Medical University, UAE
       </p>
       <p class="text-lg text-teal-400 mt-2 font-semibold italic">
-        Organized by: Gulf Medical University & Indian Institute of Information
-        Technology Bhopal, India
+        Organized by: Gulf Medical University Ajman, UAE & Indian Institute of
+        Information Technology Bhopal,India
       </p>
     </div>
 
