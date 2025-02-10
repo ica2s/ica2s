@@ -49,3 +49,17 @@ menuLinks.forEach((link) => {
 //       alert("Error: " + result.error);
 //   }
 // });
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,  // Shows 3 cards at a time
+  spaceBetween: 20,  // Adds spacing between slides
+  loop: true,        // Infinite loop
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

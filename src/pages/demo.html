@@ -7,6 +7,13 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
       defer
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="../style/style.css" />
     <title>Navbar</title>
   </head>
@@ -126,80 +133,24 @@
         </ul>
       </div>
     </nav>
-    <!-- Hero Section -->
-    <div
-      class="hero text-center py-24 px-4 mt-14 bg-[url(/images/bg-2.jpg)] bg-cover bg-center"
-    >
-      <h2 class="text-4xl font-bold text-cyan-400">Organizing Committee</h2>
-    </div>
-
-    <!-- Main Committee Section -->
-    <!-- Committee Section -->
-    <section class="contact-us text-center py-32 px-4 bg-gray-900 text-white">
-      <div class="max-w-6xl mx-auto space-y-16">
-        <!-- Example Section: Patrons -->
-        <div>
-          <h3 class="text-3xl font-semibold text-cyan-400">Patrons</h3>
-          <div class="mt-6 flex flex-wrap justify-center gap-6">
-            <div class="card">
-              <img
-                src="../../images/profile.png"
-                alt="Profile"
-                class="profile-img"
-              />
-              <h3 class="name">Prof. (Dr.) Manda Venkatramana</h3>
-              <p class="university">
-                Vice Chancellor (Academics), Gulf Medical University, UAE
-              </p>
-            </div>
-            <div class="card">
-              <img
-                src="../../images/profile.png"
-                alt="Profile"
-                class="profile-img"
-              />
-              <h3 class="name">Prof. (Dr.) Ashutosh Kumar Singh</h3>
-              <p class="university">Director, IIIT Bhopal, India</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Example Section: Honorary Chairs -->
-        <div>
-          <h3 class="text-3xl font-semibold text-cyan-400">Honorary Chairs</h3>
-          <div class="mt-6 flex flex-wrap justify-center gap-6">
-            <div class="card">
-              <img
-                src="../../images/profile.png"
-                alt="Profile"
-                class="profile-img"
-              />
-              <h3 class="name">Prof. (Dr.) Moon Moon Haque</h3>
-              <p class="university">Gulf Medical University, UAE</p>
-            </div>
-            <div class="card">
-              <img
-                src="../../images/profile.png"
-                alt="Profile"
-                class="profile-img"
-              />
-              <h3 class="name">Prof. (Dr.) Xiaoqing Wen</h3>
-              <p class="university">Kyushu Institute of Technology, Japan</p>
-            </div>
-            <div class="card">
-              <img
-                src="../../images/profile.png"
-                alt="Profile"
-                class="profile-img"
-              />
-              <h3 class="name">Prof. (Dr.) Stefan Schmid</h3>
-              <p class="university">Technical University of Berlin, Germany</p>
-            </div>
-          </div>
-        </div>
+    <div class="swiper mySwiper mt-6">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
       </div>
-    </section>
-    <!-- Tailwind Classes for Card -->
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
 
     <script type="module" src="../js/main.js"></script>
   </body>
