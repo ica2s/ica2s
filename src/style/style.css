@@ -95,24 +95,31 @@
   background-color: #06b6d4; /* Darker pink color when hovering over the scrollbar */
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
 .notice-container {
-  height: 100%;
+  height: 250px; /* Fits 3-4 notices at once */
   overflow: hidden;
-  position: relative;
 }
 
 .notice-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  animation: scrollUp 10s linear infinite;
+  animation: scroll 15s linear infinite;
 }
 
-@keyframes scrollUp {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+.notice-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.notice-list p {
+  margin: 5px; /* No gaps between notices */
 }
