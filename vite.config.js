@@ -8,10 +8,10 @@ export default defineConfig({
     rollupOptions:{
       input:{
         main: 'index.html',
-        committee:'./src/pages/committee.html',
-        call: './src/pages/call.html',
-        registration: './src/pages/registration.html',
-        updates: './src/pages/updates.html'
+        committee:'committee/index.html',
+        call: 'call/index.html',
+        registration: 'registration/index.html',
+        updates: 'updates/index.html'
       }
     }
   }
