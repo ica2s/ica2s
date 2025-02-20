@@ -11,6 +11,7 @@ export default defineConfig({
         committee:'committee/index.html',
         call: 'call/index.html',
         registration: 'registration/index.html',
+        guidelines: 'guidelines/index.html',
         updates: 'updates/index.html'
       }
     }
