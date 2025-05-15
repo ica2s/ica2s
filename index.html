@@ -144,6 +144,13 @@
 
           <li class="flex items-center">
             <a
+              href="./special-sessions/"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Call for Special Sessions</a
+            >
+          </li>
+          <li class="flex items-center">
+            <a
               href="./updates/"
               class="block px-4 py-2 md:inline hover:text-cyan-400"
               >Updates</a
@@ -265,63 +272,96 @@
       </div>
 
       <!-- Notice Board Section -->
-      <div
-        class="notice my-5 md:my-20 px-5 md:w-1/2 flex justify-center items-center"
-      >
+      <div class="notice my-10 md:my-20 px-5 flex justify-center items-center">
         <div
-          class="bg-gray-900 text-white p-5 rounded-lg shadow-lg w-full max-w-sm md:max-w-full h-64 flex flex-col relative overflow-hidden"
+          class="bg-gray-900 text-white p-6 md:p-8 rounded-2xl shadow-2xl w-full max-w-xl md:max-w-3xl h-auto flex flex-col relative overflow-hidden transition-all duration-300"
         >
-          <h2 class="text-lg font-bold text-amber-400 mb-3 text-center">
-            Updates
+          <!-- Title -->
+          <h2
+            class="text-2xl font-bold text-amber-400 mb-6 text-center tracking-wide"
+          >
+            🔔 Updates
           </h2>
-          <div class="notice-container h-40 overflow-hidden relative">
-            <div class="notice-content">
-              <!-- Duplicate Notices for Infinite Scrolling -->
-              <div class="notice-list">
-                <p class="bg-gray-800 p-2 rounded">
+
+          <!-- Scrolling Notice Container -->
+          <div class="notice-container h-48 overflow-hidden relative space-y-3">
+            <div class="notice-content space-y-3 animate-scroll-up">
+              <!-- First List of Notices -->
+              <div class="notice-list space-y-2">
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  🎯 Special Sessions/Tracks are invited —
+                  <a
+                    href="../special-sessions/"
+                    target="_blank"
+                    class="text-yellow-400 font-semibold hover:underline"
+                  >
+                    click here
+                  </a>
+                  to know more
+                </p>
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  📄 Download Call for Papers (PDF) —
                   <a
                     href="../pdfs/call.pdf"
                     target="_blank"
-                    class="font-semibold hover:underline"
+                    class="font-semibold text-amber-300 hover:underline"
                   >
-                    Download Call for Papers (PDF)
+                    view PDF
                   </a>
                 </p>
-                <p class="bg-gray-800 p-2 rounded">
-                  Paper Submission Deadline: May 31, 2025
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  🗓️ Paper Submission Deadline: <strong>May 31, 2025</strong>
                 </p>
-                <p class="bg-gray-800 p-2 rounded">
-                  Notification of Acceptance: July 25, 2025
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  📬 Notification of Acceptance: <strong>July 25, 2025</strong>
                 </p>
-                <p class="bg-gray-800 p-2 rounded">
-                  Final Camera-Ready Submission: August 30, 2025
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  📦 Final Camera-Ready Submission:
+                  <strong>August 30, 2025</strong>
                 </p>
               </div>
-              <div class="notice-list">
-                <p class="bg-gray-800 p-2 rounded">
+
+              <!-- Second List of Notices -->
+              <div class="notice-list space-y-2">
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  🎯 Special Sessions/Tracks are invited —
+                  <a
+                    href="../special-sessions/"
+                    target="_blank"
+                    class="text-yellow-400 font-semibold hover:underline"
+                  >
+                    click here
+                  </a>
+                  to know more
+                </p>
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  📄 Download Call for Papers (PDF) —
                   <a
                     href="../pdfs/call.pdf"
                     target="_blank"
-                    class="font-semibold hover:underline"
+                    class="font-semibold text-amber-300 hover:underline"
                   >
-                    Download Call for Papers (PDF)
+                    view PDF
                   </a>
                 </p>
-                <p class="bg-gray-800 p-2 rounded">
-                  Paper Submission Deadline: May 31, 2025
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  🗓️ Paper Submission Deadline: <strong>May 31, 2025</strong>
                 </p>
-                <p class="bg-gray-800 p-2 rounded">
-                  Final Camera-Ready Submission: August 30, 2025
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  📦 Final Camera-Ready Submission:
+                  <strong>August 30, 2025</strong>
                 </p>
-                <p class="bg-gray-800 p-2 rounded">
-                  AI Workshop Registrations Open Now
+                <p class="bg-gray-800 p-3 rounded-lg shadow-sm">
+                  🤖 AI Workshop Registrations Open Now
                 </p>
               </div>
             </div>
           </div>
+
+          <!-- CTA Button -->
           <a
             href="./updates/"
-            class="inline-block bg-purple-500 text-gray-900 px-6 py-2 text-lg font-semibold rounded-lg hover:bg-purple-400 transition-all duration-300 self-center mt-4"
+            class="inline-block bg-purple-500 text-gray-900 px-6 py-2 mt-6 text-lg font-semibold rounded-full hover:bg-purple-400 transition-all duration-300 self-center shadow-md"
           >
             Show More
           </a>
@@ -456,7 +496,7 @@
       <div
         class="max-w-6xl mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-8"
       >
-        <!-- Left Section - Logo & Tagline -->
+        <!-- Column 1: Logo, Tagline & Contact Info -->
         <div>
           <a href="/">
             <img
@@ -468,9 +508,23 @@
           <p class="mt-3 text-gray-400">
             Shaping the Future with Artificial Intelligence.
           </p>
+
+          <!-- Contact Info -->
+          <div class="mt-6">
+            <h2 class="text-lg font-semibold text-cyan-400">Contact Us</h2>
+            <p class="text-gray-400 mt-3">
+              For any queries, feel free to reach out:
+            </p>
+            <a
+              href="mailto:tiaih@gmu.ac.ae"
+              class="text-lg text-purple-400 font-semibold hover:underline mt-2 block"
+            >
+              tiaih@gmu.ac.ae
+            </a>
+          </div>
         </div>
 
-        <!-- Middle Section - Quick Links -->
+        <!-- Column 2: Quick Links -->
         <div>
           <h2 class="text-lg font-semibold text-cyan-400">Quick Links</h2>
           <ul class="mt-3 space-y-2">
@@ -505,31 +559,17 @@
           </ul>
         </div>
 
-        <!-- Right Section - Contact Info & Google Map -->
+        <!-- Column 3: Event Location (Map) -->
         <div>
-          <h2 class="text-lg font-semibold text-cyan-400">Contact Us</h2>
-          <p class="text-gray-400 mt-3">
-            For any queries, feel free to reach out:
-          </p>
-          <a
-            href="mailto:tiaih@gmu.ac.ae"
-            class="text-lg text-purple-400 font-semibold hover:underline mt-2 block"
-          >
-            tiaih@gmu.ac.ae
-          </a>
-
-          <div class="mt-5">
-            <h3 class="text-lg font-semibold text-cyan-400">Event Location</h3>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.624149440132!2d55.49817357484469!3d25.417388722747905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f7f989dece61%3A0x1a23a7673ae98946!2sGulf%20Medical%20University!5e0!3m2!1sen!2sin!4v1738901155013!5m2!1sen!2sin"
-              width="100%"
-              height="200"
-              style="border: 0"
-              allowfullscreen
-              loading="lazy"
-            >
-            </iframe>
-          </div>
+          <h2 class="text-lg font-semibold text-cyan-400">Event Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.624149440132!2d55.49817357484469!3d25.417388722747905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f7f989dece61%3A0x1a23a7673ae98946!2sGulf%20Medical%20University!5e0!3m2!1sen!2sin!4v1738901155013!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
         </div>
       </div>
 
