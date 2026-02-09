@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <title>Call for Papers</title>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav
+      class="bg-gray-800 p-4 fixed w-full top-0 shadow-lg z-50"
+      x-data="{ navbarOpen: false }"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../">
+          <img src="../images/logo.png" alt="Logo" class="w-24 py-2" />
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          @click="navbarOpen = !navbarOpen"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        <!-- Navbar Links -->
+        <ul
+          class="absolute top-full left-0 w-full bg-gray-800 md:bg-transparent md:static md:flex space-y-2 md:space-y-0 md:space-x-6 md:flex-row md:w-auto p-4 md:p-0 transition-all duration-300 ease-in-out"
+          :class="navbarOpen ? 'block' : 'hidden'"
+        >
+          <li class="flex items-center">
+            <a href="../" class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Home</a
+            >
+          </li>
+          <li class="flex items-center">
+            <a
+              href="../committee/"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Committee</a
+            >
+          </li>
+
+          <!-- For Authors Dropdown -->
+          <li
+            class="relative flex items-center"
+            x-data="{ dropdownOpenAuthors: false }"
+          >
+            <button
+              @click="dropdownOpenAuthors = !dropdownOpenAuthors"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+            >
+              For Authors
+            </button>
+            <ul
+              x-show="dropdownOpenAuthors"
+              x-cloak
+              @click.away="dropdownOpenAuthors = false"
+              x-transition
+              class="absolute left-0 top-full mt-2 bg-gray-800 shadow-lg rounded-lg opacity-100 transition-all duration-300 z-50 w-48"
+            >
+              <li>
+                <a href="../call/" class="block px-4 py-2 hover:bg-gray-700"
+                  >Call for Paper</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../registration/"
+                  class="block px-4 py-2 hover:bg-gray-700"
+                  >Registration</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../guidelines/"
+                  class="block px-4 py-2 hover:bg-gray-700 whitespace-nowrap"
+                  >Submission Guidelines</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="flex items-center">
+            <a
+              href="../special-sessions/"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Call for Special Sessions</a
+            >
+          </li>
+          <li class="flex items-center">
+            <a
+              href="../updates/"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Updates</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto py-16 md:py-24 px-6 mt-16">
+      <h1 class="text-4xl font-bold text-cyan-400 text-center">
+        Call for Papers
+      </h1>
+      <p class="mt-6 text-lg text-gray-300 text-justify">
+        The International Conference on Advances in Artificial Intelligence for
+        Society (ICA2S 2025) aims to bring together researchers, academicians,
+        industry professionals, and policymakers to discuss the latest
+        advancements in AI and its impact on society.
+      </p>
+      <p class="mt-4 text-gray-300 text-justify">
+        Organized by Gulf Medical University Ajman, UAE, and the Indian
+        Institute of Information Technology Bhopal, India, ICA2S 2025 will
+        provide a platform to exchange ideas, foster collaborations, and explore
+        the ethical, social, and technological dimensions of AI.
+      </p>
+      <!-- Wrapper flex container for responsive layout -->
+      <div class="mt-10 flex flex-col md:flex-row md:space-x-10">
+        <!-- Topics of Interest box -->
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-semibold text-cyan-400">
+            Topics of Interest
+          </h2>
+          <ul class="mt-4 text-gray-300 list-disc list-inside space-y-2">
+            <li>Technological Innovations in AI</li>
+            <li>AI in Healthcare: Transforming Patient Outcomes</li>
+            <li>Ethics, Privacy, and Security in AI Applications</li>
+            <li>AI-Driven Management and Decision Support</li>
+            <li>Cloud Computing and AI: Synergies for Scalability</li>
+            <li>AI for Society: Sustainability and Equity</li>
+            <li>Future Horizons in AI</li>
+          </ul>
+        </div>
+
+        <!-- Special Tracks box -->
+        <div
+          class="md:w-1/2 mt-10 md:mt-0 bg-gray-800 p-6 rounded-2xl shadow-lg border border-purple-700"
+        >
+          <h2 class="text-2xl font-semibold text-purple-300 mb-4">
+            Special Tracks
+          </h2>
+          <p class="text-gray-200 text-justify">
+            Track 1: Transforming Healthcare with Generative Artificial
+            Intelligence Models: From Prediction to Precision
+
+            <a
+              href="../pdfs/callForGen.pdf"
+              target="_blank"
+              class="text-purple-400 font-medium hover:underline"
+            >
+              (Call for Paper)
+            </a>
+          </p>
+          <br />
+          <p class="text-gray-200 text-justify">
+            Track 2: Next-Generation Healthcare Intelligence: Deep Learning and
+            Federated Approaches on HPC systems
+
+            <a
+              href="../images/cfp_ica2s.jpg"
+              target="_blank"
+              class="text-purple-400 font-medium hover:underline"
+            >
+              (Call for Paper)
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <h2 class="text-3xl font-semibold text-cyan-400 mt-10">
+        Submission Guidelines
+      </h2>
+      <p class="mt-4 text-gray-300 text-justify">
+        Authors are invited to submit original, unpublished research work
+        through the official conference submission portal. Submissions will be
+        evaluated on originality, significance, technical quality, and clarity.
+        Accepted papers must be presented at the conference by at least one
+        author.
+      </p>
+      <p class="mt-4">
+        <span class="text-cyan-400 font-semibold">Submission Link:</span>
+        <a
+          href="https://cmt3.research.microsoft.com/ICA2S2025"
+          target="_blank"
+          class="text-purple-400 hover:underline font-medium"
+        >
+          https://cmt3.research.microsoft.com/ICA2S2025
+        </a>
+      </p>
+
+      <h2 class="text-3xl font-semibold text-cyan-400 mt-10">
+        Important Dates
+      </h2>
+      <ul class="mt-4 text-gray-300 list-disc list-inside space-y-2">
+        <li>
+          Paper Submission Deadline: <del>June 30, 2025</del>
+          <strong class="text-purple-400">September 30, 2025</strong>
+        </li>
+
+        <li>Notification of Acceptance: <strong>October 15, 2025</strong></li>
+        <li>
+          Final Camera-Ready Submission: <strong>October 30, 2025</strong>
+        </li>
+      </ul>
+
+      <h2 class="text-3xl font-semibold text-cyan-400 mt-10">Publications</h2>
+      <p class="mt-4 text-gray-300 text-justify">
+        Selected papers will be considered for publication in Scopus-indexed
+        journals and edited volumes, subject to the peer review process.
+      </p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Tile 1 -->
+        <div
+          class="p-6 rounded-2xl bg-gray-800 shadow-lg hover:shadow-xl transition"
+        >
+          <h3 class="text-cyan-300 font-semibold">Book Series</h3>
+          <p class="mt-2 font-medium text-white">
+            Advances in Emerging Markets and Business Operations
+          </p>
+          <p class="italic text-gray-400 text-sm">
+            Theme: AI for Innovation and Efficiency in Management
+          </p>
+          <p class="mt-2 text-gray-300 text-sm">
+            <span class="font-semibold">Publisher:</span> Routledge, Taylor &
+            Francis Group
+          </p>
+          <p class="text-gray-300 text-sm">
+            <span class="font-semibold">Indexing:</span> Scopus Indexed
+          </p>
+        </div>
+
+        <!-- Tile 2 -->
+        <div
+          class="p-6 rounded-2xl bg-gray-800 shadow-lg hover:shadow-xl transition"
+        >
+          <h3 class="text-cyan-300 font-semibold">Book Series</h3>
+          <p class="mt-2 font-medium text-white">
+            Review of Management Literature
+          </p>
+          <p class="italic text-gray-400 text-sm">
+            Theme: Review on Application of AI in Management
+          </p>
+          <p class="mt-2 text-gray-300 text-sm">
+            <span class="font-semibold">Publisher:</span> Emerald Group
+            Publishing
+          </p>
+          <p class="text-gray-300 text-sm">
+            <span class="font-semibold">Indexing:</span> Scopus Q2
+          </p>
+        </div>
+
+        <!-- Tile 3 -->
+        <div
+          class="p-6 rounded-2xl bg-gray-800 shadow-lg hover:shadow-xl transition"
+        >
+          <h3 class="text-cyan-300 font-semibold">Book</h3>
+          <p class="mt-2 font-medium text-white">
+            Metaheuristic Optimization for Social Good
+          </p>
+          <p class="mt-2 text-gray-300 text-sm">
+            <span class="font-semibold">Publisher:</span> Elsevier Publication
+          </p>
+          <p class="text-gray-300 text-sm">
+            <span class="font-semibold">Indexing:</span> Scopus Indexed
+          </p>
+        </div>
+
+        <!-- Tile 4 -->
+        <div
+          class="p-6 rounded-2xl bg-gray-800 shadow-lg hover:shadow-xl transition"
+        >
+          <h3 class="text-cyan-300 font-semibold">Book</h3>
+          <p class="mt-2 font-medium text-white">
+            Methods for Human Centered Artificial Intelligence in Society 5.0
+          </p>
+          <p class="mt-2 text-gray-300 text-sm">
+            <span class="font-semibold">Publisher:</span> CRC Press, Taylor &
+            Francis Group
+          </p>
+          <p class="text-gray-300 text-sm">
+            <span class="font-semibold">Indexing:</span> Scopus Indexed
+          </p>
+        </div>
+
+        <!-- Tile 5 -->
+        <div
+          class="p-6 rounded-2xl bg-gray-800 shadow-lg hover:shadow-xl transition"
+        >
+          <h3 class="text-cyan-300 font-semibold">Journal</h3>
+          <p class="mt-2 font-medium text-white">FIIB Business Review</p>
+          <p class="mt-2 text-gray-300 text-sm">
+            <span class="font-semibold">Publisher:</span> Sage Journals
+          </p>
+          <p class="text-gray-300 text-sm">
+            <span class="font-semibold">Indexing:</span> Scopus Q1, ABDC, ABS,
+            IF: 2.8
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="mt-6 text-center">
+      <a
+        href="../pdfs/call1.pdf"
+        target="_blank"
+        class="text-cyan-400 font-semibold hover:underline"
+      >
+        Download Call for Papers (PDF)
+      </a>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 mt-12">
+      <div
+        class="max-w-6xl mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-8"
+      >
+        <!-- Column 1: Logo, Tagline & Contact Info -->
+        <div>
+          <a href="/">
+            <img
+              src="../images/logo.png"
+              alt="ICA2S Logo"
+              class="w-[150px] md:w-[200px] cursor-pointer"
+            />
+          </a>
+          <p class="mt-3 text-gray-400">
+            Shaping the Future with Artificial Intelligence.
+          </p>
+
+          <!-- Contact Info -->
+          <div class="mt-6">
+            <h2 class="text-lg font-semibold text-cyan-400">Contact Us</h2>
+            <p class="text-gray-400 mt-3">
+              For any queries, feel free to reach out:
+            </p>
+            <a
+              href="mailto:tiaih@gmu.ac.ae"
+              class="text-lg text-purple-400 font-semibold hover:underline mt-2 block"
+            >
+              tiaih@gmu.ac.ae
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h2 class="text-lg font-semibold text-cyan-400">Quick Links</h2>
+          <ul class="mt-3 space-y-2">
+            <li>
+              <a
+                href="/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../committee/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Committee</a
+              >
+            </li>
+            <li>
+              <a
+                href="../call/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Call for Papers</a
+              >
+            </li>
+            <li>
+              <a
+                href="../registration/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Registration</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Event Location (Map) -->
+        <div>
+          <h2 class="text-lg font-semibold text-cyan-400">Event Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.624149440132!2d55.49817357484469!3d25.417388722747905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f7f989dece61%3A0x1a23a7673ae98946!2sGulf%20Medical%20University!5e0!3m2!1sen!2sin!4v1738901155013!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div
+        class="text-center border-t border-gray-700 py-4 text-gray-400 text-sm"
+      >
+        &copy; 2025 ICA2S. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

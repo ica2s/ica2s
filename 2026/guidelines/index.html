@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../images/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style/style.css" />
+    <title>Call for Papers</title>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Navbar -->
+    <nav
+      class="bg-gray-800 p-4 fixed w-full top-0 shadow-lg z-50"
+      x-data="{ navbarOpen: false }"
+    >
+      <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <a href="../">
+          <img src="../images/logo.png" alt="Logo" class="w-24 py-2" />
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          @click="navbarOpen = !navbarOpen"
+          class="md:hidden text-white focus:outline-none"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        <!-- Navbar Links -->
+        <ul
+          class="absolute top-full left-0 w-full bg-gray-800 md:bg-transparent md:static md:flex space-y-2 md:space-y-0 md:space-x-6 md:flex-row md:w-auto p-4 md:p-0 transition-all duration-300 ease-in-out"
+          :class="navbarOpen ? 'block' : 'hidden'"
+        >
+          <li class="flex items-center">
+            <a href="../" class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Home</a
+            >
+          </li>
+          <li class="flex items-center">
+            <a
+              href="../committee/"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Committee</a
+            >
+          </li>
+
+          <!-- For Authors Dropdown -->
+          <li
+            class="relative flex items-center"
+            x-data="{ dropdownOpenAuthors: false }"
+          >
+            <button
+              @click="dropdownOpenAuthors = !dropdownOpenAuthors"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+            >
+              For Authors
+            </button>
+            <ul
+              x-show="dropdownOpenAuthors"
+              x-cloak
+              @click.away="dropdownOpenAuthors = false"
+              x-transition
+              class="absolute left-0 top-full mt-2 bg-gray-800 shadow-lg rounded-lg opacity-100 transition-all duration-300 z-50 w-48"
+            >
+              <li>
+                <a href="../call/" class="block px-4 py-2 hover:bg-gray-700"
+                  >Call for Paper</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../registration/"
+                  class="block px-4 py-2 hover:bg-gray-700"
+                  >Registration</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../guidelines/"
+                  class="block px-4 py-2 hover:bg-gray-700 whitespace-nowrap"
+                  >Submission Guidelines</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="flex items-center">
+            <a
+              href="../special-sessions/"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Call for Special Sessions</a
+            >
+          </li>
+          <li class="flex items-center">
+            <a
+              href="../updates/"
+              class="block px-4 py-2 md:inline hover:text-cyan-400"
+              >Updates</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto py-16 md:py-24 px-6 mt-16">
+      <h1 class="text-4xl font-bold text-cyan-400 text-center">
+        Author Guidelines for Paper Submission via CMT
+      </h1>
+      <ol class="mt-6 text-lg text-gray-300 list-decimal list-inside space-y-2">
+        <li>
+          <strong>Create a CMT Account</strong>
+          <ul class="list-inside list-disc pl-5">
+            <li>
+              Visit the CMT website and register if you do not have an account.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Paper Submission Process</strong>
+          <ul class="list-inside list-disc pl-5">
+            <li>
+              Log in and search for the "ICA2S 2025" conference or
+              <a
+                href="https://cmt3.research.microsoft.com/ICA2S2025"
+                target="_blank"
+                class="text-amber-400 hover:underline font-semibold"
+              >
+                click here
+              </a>
+            </li>
+
+            <li>Select "Create a New Submission."</li>
+            <li>
+              Enter the paper title, abstract, and author details (ensure all
+              co-authors are listed correctly).
+            </li>
+            <li>
+              Upload the manuscript in PDF format (follow the conference
+              template).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Formatting Requirements</strong>
+          <ul class="list-inside list-disc pl-5">
+            <li>
+              Use the official conference template (provided on the conference
+              website).
+            </li>
+            <li>
+              Ensure the paper adheres to the page limit (including references).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Keywords & Topics</strong>
+          <ul class="list-inside list-disc pl-5">
+            <li>
+              Choose relevant topics and keywords to help in the review
+              assignment.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Plagiarism Policy</strong>
+          <ul class="list-inside list-disc pl-5">
+            <li>
+              Papers must be original and free from plagiarism (checked via
+              plagiarism detection tools).
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Finalizing Submission</strong>
+          <ul class="list-inside list-disc pl-5">
+            <li>
+              Review all entered details and uploaded files before final
+              submission.
+            </li>
+            <li>Submissions cannot be edited after the deadline.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+    <!-- <div class="mt-6 text-center">
+      <a
+        href="../pdfs/call.pdf"
+        target="_blank"
+        class="text-cyan-400 font-semibold hover:underline"
+      >
+        Download Call for Papers (PDF)
+      </a>
+    </div> -->
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 mt-12">
+      <div
+        class="max-w-6xl mx-auto px-5 py-10 grid grid-cols-1 md:grid-cols-3 gap-8"
+      >
+        <!-- Column 1: Logo, Tagline & Contact Info -->
+        <div>
+          <a href="/">
+            <img
+              src="../images/logo.png"
+              alt="ICA2S Logo"
+              class="w-[150px] md:w-[200px] cursor-pointer"
+            />
+          </a>
+          <p class="mt-3 text-gray-400">
+            Shaping the Future with Artificial Intelligence.
+          </p>
+
+          <!-- Contact Info -->
+          <div class="mt-6">
+            <h2 class="text-lg font-semibold text-cyan-400">Contact Us</h2>
+            <p class="text-gray-400 mt-3">
+              For any queries, feel free to reach out:
+            </p>
+            <a
+              href="mailto:tiaih@gmu.ac.ae"
+              class="text-lg text-purple-400 font-semibold hover:underline mt-2 block"
+            >
+              tiaih@gmu.ac.ae
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h2 class="text-lg font-semibold text-cyan-400">Quick Links</h2>
+          <ul class="mt-3 space-y-2">
+            <li>
+              <a
+                href="/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="../committee/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Committee</a
+              >
+            </li>
+            <li>
+              <a
+                href="../call/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Call for Papers</a
+              >
+            </li>
+            <li>
+              <a
+                href="../registration/"
+                class="hover:text-purple-400 transition-all duration-300"
+                >Registration</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Event Location (Map) -->
+        <div>
+          <h2 class="text-lg font-semibold text-cyan-400">Event Location</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.624149440132!2d55.49817357484469!3d25.417388722747905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f7f989dece61%3A0x1a23a7673ae98946!2sGulf%20Medical%20University!5e0!3m2!1sen!2sin!4v1738901155013!5m2!1sen!2sin"
+            width="100%"
+            height="200"
+            style="border: 0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Bottom Copyright -->
+      <div
+        class="text-center border-t border-gray-700 py-4 text-gray-400 text-sm"
+      >
+        &copy; 2025 ICA2S. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

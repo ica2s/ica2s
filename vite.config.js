@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: "index.html",
         y2025: "2025/index.html",
+        y2026: "2026/index.html",
         // committee: "committee/index.html",
         // call: "call/index.html",
         // registration: "registration/index.html",
