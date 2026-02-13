@@ -9,7 +9,6 @@ export default defineConfig({
       input: {
         main: "index.html",
         y2025: "2025/index.html",
-        y2026: "2026/index.html",
 
         committee2025: "2025/committee/index.html",
         call2025: "2025/call/index.html",
@@ -17,6 +16,15 @@ export default defineConfig({
         guidelines2025: "2025/guidelines/index.html",
         updates2025: "2025/updates/index.html",
         special2025: "2025/special-sessions/index.html",
+
+        // 2026
+        y2026: "2026/index.html",
+        committee2026: "2026/committee/index.html",
+        call2026: "2026/call/index.html",
+        registration2026: "2026/registration/index.html",
+        guidelines2026: "2026/guidelines/index.html",
+        updates2026: "2026/updates/index.html",
+        special2026: "2026/special-sessions/index.html",
       },
     },
   },
