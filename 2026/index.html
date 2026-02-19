@@ -37,6 +37,8 @@
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
         }
 		a{ color: var(--accent-gold);}
         
@@ -165,7 +167,7 @@
         
         /* Hero Section */
         .hero {
-            min-height: 100vh;
+            mmmin-height: 100dvh;
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 50%, #1e40af 100%);
             display: flex;
             align-items: center;
@@ -210,7 +212,7 @@
         
         .hero h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: clamp(1.6rem, 5vw, 2.5rem);
             font-weight: 900;
             color: white;
             line-height: 1.2;
@@ -392,7 +394,7 @@
         /* Themes Section */
         .themes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 1.5rem;
             margin-top: 2rem;
         }
@@ -632,7 +634,7 @@
         /* Contact Section */
         .contact-container {
             display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -807,9 +809,7 @@ tr:nth-child(even){
 }
 
 /* Hide mobile tables on desktop */
-.mobile-table{
-  display:none;
-}
+.mobile-table{   display:none; }
 
 .caption{
   font-size:20px;
@@ -820,13 +820,9 @@ tr:nth-child(even){
         /* Mobile Responsive Styles */
         @media (max-width: 900px) {
 		
-		.desktop-table{
-  display:none;
-}
+		.desktop-table{  display:none;}
 
-.mobile-table{
-  display:block;
-}
+		.mobile-table{   display:block; }
             :root {
                 --nav-height: 60px;
             }
@@ -985,6 +981,12 @@ tr:nth-child(even){
 .hero-subtitle a:hover::after{
   width:100%;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
     </style>
 </head>
 <body>
@@ -1035,8 +1037,7 @@ tr:nth-child(even){
     text-decoration:none;
     position:relative;
     transition:0.3s;
-  ">  <img src="logo-iiitb.png" width="30" style="vertical-align:middle;">
-    Indian Institute of Information Technology Bhopal, India
+  ">     Indian Institute of Information Technology Bhopal, India
   </a> 
   in collaboration with 
   <a href="https://vizja.pl/en/" target="_blank" class="hero-date" style="
@@ -1044,8 +1045,7 @@ tr:nth-child(even){
     text-decoration:none;
     position:relative;
     transition:0.3s;
-  "> <img src="logo-v.png" width="55" style="vertical-align:middle;">
-    University of Vizja, Warsaw, Poland.
+  "> University of Vizja, Warsaw, Poland.
   </a>
 </p>
 
