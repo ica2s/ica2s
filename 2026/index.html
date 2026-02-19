@@ -40,6 +40,21 @@
 			word-wrap: break-word;
 			overflow-wrap: break-word;
         }
+
+		body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+nav {
+    padding-top: env(safe-area-inset-top);
+}
+
+footer {
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+}
+
+		
 		a{ color: var(--accent-gold);}
         
         /* Fixed Navigation */
