@@ -1054,15 +1054,27 @@ img {
     <nav id="navbar">
         <div class="nav-container">
 
-			<html-include src="header.html"></html-include>
-			   <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
+			    <script>
+        // Reusable include function
+        function includeHTML(elementId, file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) throw new Error('File not found');
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Include error:', error);
+                    document.getElementById(elementId).innerHTML = '<p>Error loading content</p>';
+                });
+        }
+
+        // Usage
+        includeHTML('header-placeholder', 'header.html');
+        includeHTML('footer-placeholder', 'footer.html');
     </script>
-			
 			
             
         </div>
