@@ -35,6 +35,16 @@ export default defineConfig({
         contact2026: "2026/contact.html",
         special2026: "2026/special-track.html",
         timeline2026: "2026/timeline.html",
+
+         // 2026
+        y2026B: "2026B/index.html",
+        committee2026B: "2026B/committee.html",
+        about2026B: "2026B/about.html",
+        registration2026B: "2026B/registration.html",
+        authors2026B: "2026B/authors.html",
+        contact2026B: "2026B/contact.html",
+        special2026B: "2026B/special-track.html",
+        timeline2026B: "2026B/timeline.html",
       },
     },
   },
