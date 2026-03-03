@@ -848,7 +848,7 @@ margin:15px 0;
 }
 
 /* Mobile Responsive Styles */
-@media (max-width: 789px) {
+@media (max-width: 889px) {
 
 .hero-main { min-height: 100dvh; }
 
