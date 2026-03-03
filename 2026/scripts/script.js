@@ -1,97 +1,139 @@
-// Mobile menu toggle
-const menuToggle = document.getElementById('menuToggle');
-const navMenu = document.getElementById('navMenu');
-const navLinks = document.querySelectorAll('.nav-link');
+<script defer>
+document.addEventListener("DOMContentLoaded", () => {
 
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+    /* =============================
+       CACHE DOM ELEMENTS (ONLY ONCE)
+    ============================== */
 
-// Close menu when clicking on a link (mobile)
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    const navbar = document.getElementById("navbar");
+    const contactForm = document.getElementById("contactForm");
+
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section");
+    const registerButtons = document.querySelectorAll(".register-button");
+    const ctaButtons = document.querySelectorAll(".cta-button");
+
+    /* =============================
+       MOBILE MENU (EVENT DELEGATION)
+    ============================== */
+
+    menuToggle?.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        navMenu.classList.toggle("active");
     });
-});
 
-// Navigation scroll behavior
-const navbar = document.getElementById('navbar');
-
-// Add scrolled class to navbar on scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    
-});
-
-// Contact form submission
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Simple validation
-    if (name && email && message) {
-        alert(`Thank you, ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
-        contactForm.reset();
-    }
-});
-
-// Intersection Observer for animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+    navMenu?.addEventListener("click", (e) => {
+        if (e.target.classList.contains("nav-link")) {
+            menuToggle.classList.remove("active");
+            navMenu.classList.remove("active");
         }
     });
-}, observerOptions);
 
-// Observe all cards and animated elements
-document.querySelectorAll('.theme-card, .committee-card, .registration-card, .stat-card, .timeline-item').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-});
+    /* =============================
+       THROTTLED SCROLL HANDLER
+    ============================== */
 
-// Registration button interactions
-const registerButtons = document.querySelectorAll('.register-button');
-registerButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const cardType = button.closest('.registration-card').querySelector('.registration-type').textContent;
-        alert(`Registration for ${cardType} type selected! You would be redirected to the payment portal.`);
-    });
-});
+    let ticking = false;
 
-// CTA button smooth scroll
-document.querySelectorAll('.cta-button').forEach(button => {
-    button.addEventListener('click', (e) => {
-        if (button.getAttribute('href').startsWith('#')) {
-            e.preventDefault();
-            const targetId = button.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+    function handleScroll() {
+        const scrollY = window.scrollY;
+
+        // Navbar style change
+        navbar?.classList.toggle("scrolled", scrollY > 50);
+
+        // Update active link
+        const scrollPosition = scrollY + 100;
+
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            const id = section.id;
+
+            if (scrollPosition >= top && scrollPosition < top + height) {
+                navLinks.forEach(link => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === `#${id}`
+                    );
                 });
             }
+        });
+
+        ticking = false;
+    }
+
+    window.addEventListener("scroll", () => {
+        if (!ticking) {
+            window.requestAnimationFrame(handleScroll);
+            ticking = true;
         }
     });
+
+    /* =============================
+       SMOOTH SCROLL (ONE LISTENER)
+    ============================== */
+
+    document.addEventListener("click", (e) => {
+        const link = e.target.closest("a[href^='#']");
+        if (!link) return;
+
+        const target = document.querySelector(link.getAttribute("href"));
+        if (!target) return;
+
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    /* =============================
+       CONTACT FORM
+    ============================== */
+
+    contactForm?.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const { name, email, message } = contactForm.elements;
+
+        if (name.value && email.value && message.value) {
+            alert(`Thank you, ${name.value}! We'll contact you at ${email.value}.`);
+            contactForm.reset();
+        }
+    });
+
+    /* =============================
+       INTERSECTION OBSERVER
+    ============================== */
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                obs.unobserve(entry.target); // stop observing after animation
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: "0px 0px -100px 0px"
+    });
+
+    document.querySelectorAll(
+        ".theme-card, .committee-card, .registration-card, .stat-card, .timeline-item"
+    ).forEach(el => observer.observe(el));
+
+    /* =============================
+       REGISTRATION BUTTON
+    ============================== */
+
+    registerButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const cardType = button
+                .closest(".registration-card")
+                ?.querySelector(".registration-type")?.textContent;
+
+            alert(`Registration for ${cardType} selected.`);
+        });
+    });
+
 });
+</script>
