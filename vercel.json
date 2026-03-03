@@ -3,6 +3,6 @@
     { "source": "/", "destination": "/index.html" },
     { "source": "/2025/:path*", "destination": "/2025/index.html" },
     { "source": "/2026/:path*", "destination": "/2026/index.html" }
-    { "source": "/2026/:path*", "destination": "/2026Y/index.html" }
+    { "source": "/2026X/:path*", "destination": "/2026X/index.html" }
   ]
 }
