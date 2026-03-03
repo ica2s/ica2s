@@ -18,13 +18,13 @@ export default defineConfig({
         special2025: "2025/special-sessions/index.html",
 
         // 2026
-        y2026: "2026/index.html",
-        committee2026: "2026/committee/index.html",
-        call2026: "2026/call/index.html",
-        registration2026: "2026/registration/index.html",
-        guidelines2026: "2026/guidelines/index.html",
-        updates2026: "2026/updates/index.html",
-        special2026: "2026/special-sessions/index.html",
+        y2026X: "2026X/index.html",
+        committee2026X: "2026X/committee/index.html",
+        call2026X: "2026X/call/index.html",
+        registration2026X: "2026X/registration/index.html",
+        guidelines2026X: "2026X/guidelines/index.html",
+        updates2026X: "2026X/updates/index.html",
+        special2026X: "2026X/special-sessions/index.html",
 
         // 2026
         y2026: "2026Y/index.html",
