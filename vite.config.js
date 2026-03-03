@@ -25,6 +25,15 @@ export default defineConfig({
         guidelines2026: "2026/guidelines/index.html",
         updates2026: "2026/updates/index.html",
         special2026: "2026/special-sessions/index.html",
+
+        // 2026
+        y2026: "2026Y/index.html",
+        committee2026: "2026/committee/index.html",
+        call2026: "2026/call/index.html",
+        registration2026: "2026/registration/index.html",
+        guidelines2026: "2026/guidelines/index.html",
+        updates2026: "2026/updates/index.html",
+        special2026: "2026/special-sessions/index.html",
       },
     },
   },
