@@ -11,6 +11,46 @@
     <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <script src="scripts/script.js" defer></script>
+<style>
+.committee-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #fff;
+}
+
+.session-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.session-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.session-label {
+    font-weight: 600;
+    min-width: 140px;
+}
+
+.session-content {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .session-row {
+        flex-direction: column;
+    }
+    .session-label {
+        margin-bottom: 5px;
+    }
+}
+</style>
+
 </head>
 <body>
     <!-- Fixed Navigation -->
@@ -54,30 +94,55 @@
                 </p>
             </div>
 			
-			     <div class="committee-card">
-	 <table><tr><td colspan="2"> 1. Advances in AI for Software Engineering</td></tr>
 
-	<tr><td>Session Chairs</td> <td>
-	Dr. Vinay Raj, NIT Tiruchirappalli, India
-<br> Prof. Ravichandra Sadam, NIT Warangal, India
-</td></tr>
-    <tr><td>Brief Description</td> <td><div class="designation-affiliation">
+
+<!-- Card 1 -->
+<div class="committee-card">
+
+<div class="session-title">
+1. Advances in AI for Software Engineering
+</div>
+
+<div class="session-row">
+<div class="session-label">Session Chairs</div>
+<div class="session-content">
+Dr. Vinay Raj, NIT Tiruchirappalli, India <br>
+Prof. Ravichandra Sadam, NIT Warangal, India
+</div>
+</div>
+
+<div class="session-row">
+<div class="session-label">Brief Description</div>
+<div class="session-content designation-affiliation">
 This special session aims to bring together researchers and practitioners working at the intersection of AI and Software Engineering to present recent advances, innovative methodologies, and real-world applications of AI in the software development lifecycle. The session will focus on emerging research trends, challenges, and opportunities in applying machine learning, deep learning, natural language processing, and other AI techniques to improve software engineering processes and tools.
-</div></td></tr></table>
-    </div>
-	
-				     <div class="committee-card">
-	 <table><tr><td  colspan="2"> 2. AI and Big Data Analytics for Green Computing and Sustainability</td></tr>
+</div>
+</div>
 
-	<tr><td>Session Chairs</td> <td>
-Dr. Nishtha Parashar, Assistant Professor, Amity University Madhya Pradesh (Email: nishtha2909@gmail.com)
-<br>
-Ms. Ambika Gupta, Assistant Professor, Sharda University, Agra, Uttar Pradesh (Email: ambikagupta2007@gmail.com)
-</td></tr>
-    <tr><td>Brief Description</td> <td><div class="designation-affiliation">
+</div>
+
+<!-- Card 2 -->
+<div class="committee-card">
+
+<div class="session-title">
+2. AI and Big Data Analytics for Green Computing and Sustainability
+</div>
+
+<div class="session-row">
+<div class="session-label">Session Chairs</div>
+<div class="session-content">
+Dr. Nishtha Parashar, Amity University Madhya Pradesh <br>
+Ms. Ambika Gupta, Sharda University, Agra, Uttar Pradesh
+</div>
+</div>
+
+<div class="session-row">
+<div class="session-label">Brief Description</div>
+<div class="session-content designation-affiliation">
 This special session focuses on the role of Artificial Intelligence (AI) and Big Data Analytics in promoting environmentally sustainable computing practices. It aims to explore innovative techniques, models, and data-driven solutions that improve energy efficiency, reduce carbon footprints, and optimize resource utilization in computing systems. The session encourages research on intelligent algorithms, sustainable data centers, green cloud computing, and analytics-driven environmental monitoring to support sustainable development and eco-friendly technological advancements.
-</div></td></tr></table>
-    </div>
+</div>
+</div>
+
+</div>
 	
 			
 			
