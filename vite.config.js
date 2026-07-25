@@ -36,6 +36,17 @@ export default defineConfig({
         special2026: "2026/special-track.html",
         timeline2026: "2026/timeline.html",
 
+        // 2026IEEE
+        y2026: "2026IEEE/index.html",
+        committee2026: "2026IEEE/committee.html",
+        about2026: "2026IEEE/about.html",
+        registration2026: "2026IEEE/registration.html",
+        authors2026: "2026IEEE/authors.html",
+        contact2026: "2026IEEE/contact.html",
+        special2026: "2026IEEE/special-track.html",
+        timeline2026: "2026IEEE/timeline.html",
+
+
          // 2026
         y2026B: "2026B/index.html",
         committee2026B: "2026B/committee.html",
