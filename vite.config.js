@@ -37,7 +37,7 @@ export default defineConfig({
         timeline2026: "2026/timeline.html",
 
         // 2026IEEE
-        y2026: "2026IEEE/index.html",
+        y2026IEEE: "2026IEEE/index.html",
         committee2026: "2026IEEE/committee.html",
         about2026: "2026IEEE/about.html",
         registration2026: "2026IEEE/registration.html",
